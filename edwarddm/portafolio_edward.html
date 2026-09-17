@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edward De La Cruz | Consultor PR & Estrategia</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Config para asegurar animaciones dinámicas -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            },
+            // Aseguramos que Tailwind compile clases que se inyectan dinámicamente vía JS
+            safelist: [
+                'scale-110', 'opacity-100', 'text-cyan-600', 'translate-y-0', 'opacity-0', 'translate-y-12', 'scale-95', 'scale-100', 'modal-active', 'group-hover:scale-110', 'group-hover:opacity-100', 'hover:-translate-y-2', 'hover:shadow-2xl'
+            ]
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS Base -->
+    <style>
+        body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        
+        /* Sistema de Scroll Reveal (Animación de entrada) */
+        .reveal { opacity: 0; transform: translateY(3rem); transition: all 1s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        
+        /* Utilidad para bloquear el scroll del fondo cuando el modal está abierto */
+        .modal-active { overflow: hidden; }
+        
+        /* Asegurando que los group-hover funcionen si Tailwind CDN retrasa la carga */
+        .group:hover .group-hover\:translate-x-1 { transform: translateX(0.25rem); }
+        .group:hover .group-hover\:scale-105 { transform: scale(1.05); }
+        .group:hover .group-hover\:-translate-y-1 { transform: translateY(-0.25rem); }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 selection:bg-cyan-500 selection:text-white">
+
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-6">
+        <div class="max-w-7xl mx-auto px-8 md:px-12 lg:px-20 flex justify-between items-center">
+            <a href="#" class="flex items-center hover:scale-105 hover:opacity-80 transition-all duration-300 active:scale-95">
+                <img src="https://res.cloudinary.com/eamgwqrw/image/upload/v1789618723/Recurso_4.png" alt="Logo Edward De La Cruz" class="h-10 md:h-14 w-auto object-contain" />
+            </a>
+            <div class="hidden md:flex space-x-8 text-sm font-bold text-slate-500 uppercase tracking-wide">
+                <a href="#perfil" class="hover:text-cyan-600 transition-colors">Perfil</a>
+                <a href="#experiencia" class="hover:text-cyan-600 transition-colors">Trayectoria</a>
+                <a href="#casos" class="hover:text-cyan-600 transition-colors">Casos de Éxito</a>
+            </div>
+            <a href="#contacto" class="bg-blue-950 text-white px-7 py-2.5 rounded-full text-sm font-bold hover:bg-cyan-500 hover:text-blue-950 hover:scale-105 active:scale-95 transition-all duration-300 shadow-lg hover:shadow-cyan-500/20">
+                Conectemos
+            </a>
+        </div>
+    </nav>
+
+    <section class="relative min-h-[90vh] flex items-center pt-28 pb-12 lg:pt-32 lg:pb-16 px-8 md:px-12 lg:px-20 overflow-hidden bg-white">
+        <!-- Fondos decorativos -->
+        <div class="absolute top-0 right-0 -mr-48 -mt-48 w-[800px] h-[800px] bg-gradient-to-br from-blue-50 to-cyan-50 rounded-full blur-3xl opacity-70 pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 -ml-48 -mb-48 w-[600px] h-[600px] bg-slate-100 rounded-full blur-3xl opacity-60 pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto w-full relative z-10 grid lg:grid-cols-12 gap-12 items-center">
+            
+            <div class="lg:col-span-7">
+                <div class="reveal delay-0">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-100 text-blue-900 rounded-full mb-6 md:mb-8 shadow-sm">
+                        <span class="w-2 h-2 rounded-full bg-cyan-500 animate-pulse"></span>
+                        <span class="text-xs font-bold tracking-wide uppercase">PR, Public Affairs & Growth Digital</span>
+                    </div>
+                </div>
+                
+                <div class="reveal" style="transition-delay: 100ms;">
+                    <h1 class="text-5xl lg:text-7xl font-extrabold leading-[1.05] tracking-tight mb-6 text-blue-950">
+                        Data-Driven <br/>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-800 to-cyan-500">
+                            Relaciones Públicas.
+                        </span>
+                    </h1>
+                </div>
+                
+                <div class="reveal" style="transition-delay: 200ms;">
+                    <p class="text-base md:text-lg text-slate-600 mb-10 max-w-2xl leading-relaxed font-medium">
+                        Estratega de Comunicación Corporativa y Asuntos Públicos. Traduzco objetivos técnicos y comerciales en narrativas de alto impacto mediático, gestionando la arquitectura de marca para la alta dirección y ecosistemas digitales enfocados en ROI.
+                    </p>
+                </div>
+                
+                <div class="reveal" style="transition-delay: 300ms;">
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#casos" class="group flex items-center gap-2 bg-blue-950 text-white px-8 py-4 rounded-full font-bold hover:bg-cyan-500 hover:text-blue-950 hover:scale-105 active:scale-95 transition-all duration-300 shadow-xl hover:shadow-cyan-500/30">
+                            Ver Impacto Corporativo <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                        <a href="https://drive.google.com/file/d/19185nLhoGZ852pgBQhLd-EkNOFVILC0M/view?usp=sharing" target="_blank" rel="noreferrer" class="flex items-center gap-2 bg-white border-2 border-slate-200 text-slate-700 px-8 py-4 rounded-full font-bold hover:border-blue-950 hover:text-blue-950 hover:scale-105 active:scale-95 transition-all duration-300 shadow-sm">
+                            <i data-lucide="download" class="w-5 h-5"></i> Descargar CV
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="lg:col-span-5 relative mt-6 lg:mt-0">
+                <div class="reveal relative z-10" style="transition-delay: 200ms;">
+                    <!-- Foto de Perfil Enmarcada -->
+                    <div class="w-full h-[450px] md:h-[500px] lg:h-[600px] bg-slate-100 rounded-[2rem] overflow-hidden shadow-2xl relative group border border-slate-200/50">
+                        <div class="absolute inset-0 bg-gradient-to-t from-blue-950/90 via-blue-950/20 to-transparent z-10 transition-opacity duration-500 group-hover:via-blue-950/40"></div>
+                        <img src="https://res.cloudinary.com/eamgwqrw/image/upload/v1789615676/1776309181433.png" alt="Edward De La Cruz" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
+                        
+                        <div class="absolute bottom-8 left-8 z-20 text-white transform transition-transform duration-500 group-hover:-translate-y-2">
+                            <p class="font-extrabold text-2xl mb-1">Edward De La Cruz M.</p>
+                            <p class="text-sm text-cyan-400 font-bold tracking-wide uppercase">Consultor Estratégico</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="bg-blue-950 text-white py-16 lg:py-20 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl"></div>
+        <div class="max-w-7xl mx-auto px-8 md:px-12 lg:px-20 relative z-10">
+            <div class="reveal">
+                <p class="text-center text-cyan-400 font-bold tracking-widest uppercase mb-12 text-base md:text-lg hover:text-white transition-colors duration-300 cursor-default">Medición de Resultados & Impacto</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 divide-y md:divide-y-0 md:divide-x divide-blue-800/50">
+                <div class="reveal text-center pt-8 md:pt-0 px-4 group cursor-pointer hover:-translate-y-2 transition-transform duration-300" style="transition-delay: 100ms;">
+                    <p class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-2 group-hover:text-cyan-400 transition-colors">+150</p>
+                    <p class="text-[10px] md:text-xs text-blue-200 uppercase tracking-wider font-medium group-hover:text-white transition-colors">Impactos en Prensa Tier 1 (Business/Economía)</p>
+                </div>
+                <div class="reveal text-center pt-8 md:pt-0 px-4 group cursor-pointer hover:-translate-y-2 transition-transform duration-300" style="transition-delay: 200ms;">
+                    <p class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-2 group-hover:text-cyan-400 transition-colors">-91%</p>
+                    <p class="text-[10px] md:text-xs text-blue-200 uppercase tracking-wider font-medium group-hover:text-white transition-colors">Optimización CPL (Ecosistema Growth B2B)</p>
+                </div>
+                <div class="reveal text-center pt-8 md:pt-0 px-4 group cursor-pointer hover:-translate-y-2 transition-transform duration-300" style="transition-delay: 300ms;">
+                    <p class="text-4xl md:text-5xl lg:text-5xl font-extrabold text-white mb-2 pt-2 md:pt-1 group-hover:text-cyan-400 transition-colors">Top</p>
+                    <p class="text-[10px] md:text-xs text-blue-200 uppercase tracking-wider font-medium group-hover:text-white transition-colors">Cobertura en Prensa Especializada</p>
+                </div>
+                <div class="reveal text-center pt-8 md:pt-0 px-4 group cursor-pointer hover:-translate-y-2 transition-transform duration-300" style="transition-delay: 400ms;">
+                    <p class="text-4xl md:text-5xl lg:text-5xl font-extrabold text-white mb-2 pt-2 md:pt-1 group-hover:text-cyan-400 transition-colors">360°</p>
+                    <p class="text-[10px] md:text-xs text-blue-200 uppercase tracking-wider font-medium group-hover:text-white transition-colors">Ecosistema Digital y Estrategia PR</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="perfil" class="py-24 px-8 md:px-12 lg:px-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <div class="reveal">
+                    <h2 class="text-base md:text-lg font-bold text-cyan-600 tracking-widest uppercase mb-3">Visión Consultiva | Relaciones Públicas 360°</h2>
+                    <h3 class="text-2xl md:text-4xl font-extrabold tracking-tight mb-6 text-blue-950 leading-tight">Gestionando la reputación como un activo estratégico para generar ventaja competitiva.</h3>
+                </div>
+                
+                <div class="reveal" style="transition-delay: 100ms;">
+                    <div class="space-y-4 text-slate-600 text-base leading-relaxed font-medium">
+                        <p>
+                            Consultor de Comunicación Estratégica y Asuntos Públicos, enfocado en construir y proteger la reputación corporativa de sectores B2B, corporaciones industriales y organismos de cooperación internacional. 
+                        </p>
+                        <p>
+                            Mi enfoque se basa en el Performance PR: diseño y ejecuto campañas de comunicación efectivas sustentadas en data, garantizando un impacto cuantificable a través del Earned Media, PR Value y ROI. 
+                        </p>
+                        <p>
+                            Traduzco la complejidad técnica e institucional en narrativas claras de alto impacto mediático; liderando el posicionamiento directivo (C-Level), la gestión de crisis y el relacionamiento estratégico con stakeholders clave para convertir la visibilidad en influencia y rentabilidad.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="reveal" style="transition-delay: 200ms;">
+                    <div class="mt-8 flex gap-4">
+                        <a href="https://www.linkedin.com/in/edwarddm/" target="_blank" rel="noreferrer" class="flex items-center gap-2 text-blue-950 font-bold hover:text-cyan-600 hover:scale-105 active:scale-95 transition-all">
+                            <i data-lucide="linkedin" class="w-5 h-5"></i> LinkedIn
+                        </a>
+                        <a href="https://www.behance.net/edwarddm" target="_blank" rel="noreferrer" class="flex items-center gap-2 text-blue-950 font-bold hover:text-cyan-600 hover:scale-105 active:scale-95 transition-all ml-4">
+                            <i data-lucide="globe" class="w-5 h-5"></i> Portafolio Visual
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="reveal" style="transition-delay: 200ms;">
+                <div class="bg-white p-8 md:p-10 rounded-[2rem] shadow-xl shadow-slate-200/40 border border-slate-100 hover:shadow-2xl transition-shadow duration-500">
+                    <h3 class="text-xl font-extrabold mb-8 flex items-center gap-3 text-blue-950">
+                        <i data-lucide="terminal" class="w-6 h-6 text-cyan-500 animate-pulse"></i> Core Competencies & Tech Skills
+                    </h3>
+                    
+                    <div class="space-y-8">
+                        <div>
+                            <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Estrategia PR & Public Affairs</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-4 py-2 bg-blue-50 text-blue-900 border border-blue-100 rounded-lg text-sm font-bold shadow-sm hover:-translate-y-1 transition-transform cursor-default">Media Relations & Pitching (Tier 1)</span>
+                                <span class="px-4 py-2 bg-blue-50 text-blue-900 border border-blue-100 rounded-lg text-sm font-bold shadow-sm hover:-translate-y-1 transition-transform cursor-default">Incidencia Política (Advocacy)</span>
+                                <span class="px-4 py-2 bg-blue-50 text-blue-900 border border-blue-100 rounded-lg text-sm font-bold shadow-sm hover:-translate-y-1 transition-transform cursor-default">Crisis Management</span>
+                                <span class="px-4 py-2 bg-blue-50 text-blue-900 border border-blue-100 rounded-lg text-sm font-bold shadow-sm hover:-translate-y-1 transition-transform cursor-default">Relaciones Institucionales</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Análisis, Branding & Posicionamiento</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-4 py-2 bg-cyan-50 text-cyan-800 border border-cyan-200 rounded-lg text-sm font-bold shadow-sm hover:-translate-y-1 transition-transform cursor-default">Arquitectura Reputacional (C-Level)</span>
+                                <span class="px-4 py-2 bg-cyan-50 text-cyan-800 border border-cyan-200 rounded-lg text-sm font-bold shadow-sm hover:-translate-y-1 transition-transform cursor-default">Medición de Share of Voice (SOV)</span>
+                                <span class="px-4 py-2 bg-cyan-50 text-cyan-800 border border-cyan-200 rounded-lg text-sm font-bold shadow-sm hover:-translate-y-1 transition-transform cursor-default">Marketing B2B</span>
+                                <span class="px-4 py-2 bg-slate-50 text-slate-700 border border-slate-200 rounded-lg text-sm font-bold shadow-sm hover:-translate-y-1 transition-transform cursor-default">Comunicación ESG</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experiencia" class="py-24 px-8 md:px-12 lg:px-20 bg-white border-y border-slate-100">
+        <div class="max-w-4xl mx-auto">
+            <div class="reveal text-center mb-16">
+                <h2 class="text-sm font-bold text-cyan-600 tracking-widest uppercase mb-3">Historial Corporativo</h2>
+                <h3 class="text-3xl md:text-5xl font-extrabold tracking-tight text-blue-950">Trayectoria Profesional</h3>
+            </div>
+            
+            <div class="space-y-12 relative before:absolute before:inset-0 before:ml-[1.125rem] md:before:ml-0 md:before:mx-auto md:before:translate-x-0 before:h-full before:w-1 before:bg-gradient-to-b before:from-transparent before:via-slate-200 before:to-transparent">
+                
+                <!-- Timeline Item 1 -->
+                <div class="reveal relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group cursor-default" style="transition-delay: 100ms;">
+                    <div class="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full border-4 border-white bg-slate-100 text-slate-400 group-hover:bg-cyan-500 group-hover:text-white transition-colors duration-500 shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 shadow-sm group-hover:shadow-cyan-500/50 z-10">
+                        <i data-lucide="globe-2" class="w-5 h-5"></i>
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] p-6 md:p-8 rounded-3xl bg-white border border-slate-100 shadow-sm group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-3 gap-2">
+                            <h4 class="font-extrabold text-xl text-blue-950">Consultor de Comunicación</h4>
+                            <span class="text-[10px] md:text-xs font-bold text-cyan-700 bg-cyan-50 px-3 py-1 rounded-full border border-cyan-100 w-fit">08/2025 - Presente</span>
+                        </div>
+                        <p class="text-sm font-bold text-cyan-500 uppercase tracking-wide mb-4">FRATER PERÚ / Cooperación Española (AECID)</p>
+                        <p class="text-slate-600 text-sm leading-relaxed font-medium">
+                            Proyecto de Cooperación Internacional. Diseño y ejecución de estrategias de asuntos públicos y relacionamiento mediático. Lidero la convergencia entre PR tradicional y un ecosistema digital avanzado enfocado en campañas de incidencia política (Advocacy).
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="reveal relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group cursor-default" style="transition-delay: 200ms;">
+                    <div class="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full border-4 border-white bg-slate-100 text-slate-400 group-hover:bg-cyan-500 group-hover:text-white transition-colors duration-500 shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 shadow-sm group-hover:shadow-cyan-500/50 z-10">
+                        <i data-lucide="bar-chart" class="w-5 h-5"></i>
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] p-6 md:p-8 rounded-3xl bg-white border border-slate-100 shadow-sm group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-3 gap-2">
+                            <h4 class="font-extrabold text-xl text-blue-950">Analista de Marketing & Comunicaciones B2B</h4>
+                            <span class="text-[10px] md:text-xs font-bold text-slate-500 bg-slate-100 px-3 py-1 rounded-full w-fit">03/2025 - 07/2025</span>
+                        </div>
+                        <p class="text-sm font-bold text-cyan-500 uppercase tracking-wide mb-4">Grupo HNG</p>
+                        <p class="text-slate-600 text-sm leading-relaxed font-medium">
+                            Holding de 10 empresas de servicios B2B. Logré optimizar el CPL en un -91% e incrementar el tráfico web en +729% mediante estrategias de Growth B2B. Dirigí la arquitectura reputacional de la directiva posicionándolos como referentes sectoriales.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="reveal relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group cursor-default" style="transition-delay: 300ms;">
+                    <div class="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full border-4 border-white bg-slate-100 text-slate-400 group-hover:bg-cyan-500 group-hover:text-white transition-colors duration-500 shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 shadow-sm group-hover:shadow-cyan-500/50 z-10">
+                        <i data-lucide="megaphone" class="w-5 h-5"></i>
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] p-6 md:p-8 rounded-3xl bg-white border border-slate-100 shadow-sm group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-3 gap-2">
+                            <h4 class="font-extrabold text-xl text-blue-950">Consultor de Comunicación y PR</h4>
+                            <span class="text-[10px] md:text-xs font-bold text-slate-500 bg-slate-100 px-3 py-1 rounded-full w-fit">11/2023 - 01/2025</span>
+                        </div>
+                        <p class="text-sm font-bold text-cyan-500 uppercase tracking-wide mb-4">QINTI Comunicaciones</p>
+                        <p class="text-slate-600 text-sm leading-relaxed font-medium">
+                            Dirección de campañas de incidencia nacional (Presupuesto SAE 2024 para SODIS), logrando la participación activa de líderes de opinión. Edición de materiales estratégicos para instituciones clave como Proinversión e IDEA Internacional.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 4 -->
+                <div class="reveal relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group cursor-default" style="transition-delay: 400ms;">
+                    <div class="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full border-4 border-white bg-slate-100 text-slate-400 group-hover:bg-cyan-500 group-hover:text-white transition-colors duration-500 shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 shadow-sm group-hover:shadow-cyan-500/50 z-10">
+                        <i data-lucide="briefcase" class="w-5 h-5"></i>
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] p-6 md:p-8 rounded-3xl bg-white border border-slate-100 shadow-sm group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-3 gap-2">
+                            <h4 class="font-extrabold text-xl text-blue-950">Ejecutivo de Relaciones Públicas</h4>
+                            <span class="text-[10px] md:text-xs font-bold text-slate-500 bg-slate-100 px-3 py-1 rounded-full w-fit">03/2024 - 12/2024</span>
+                        </div>
+                        <p class="text-sm font-bold text-cyan-500 uppercase tracking-wide mb-4">LIBA Comunicaciones</p>
+                        <p class="text-slate-600 text-sm leading-relaxed font-medium">
+                            Gestión integral de cuentas clave (Tetra Pak, Defontana, Zegel). Logré +25 impactos en medios Tier 1 impulsando el Share of Voice en un 100% de manera orgánica. Acreditación de PR Value mensual promedio superior a S/ 53K.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 5 -->
+                <div class="reveal relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group cursor-default" style="transition-delay: 500ms;">
+                    <div class="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full border-4 border-white bg-slate-100 text-slate-400 group-hover:bg-cyan-500 group-hover:text-white transition-colors duration-500 shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 shadow-sm group-hover:shadow-cyan-500/50 z-10">
+                        <i data-lucide="mic" class="w-5 h-5"></i>
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] p-6 md:p-8 rounded-3xl bg-white border border-slate-100 shadow-sm group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-3 gap-2">
+                            <h4 class="font-extrabold text-xl text-blue-950">Pasante en Comunicación Corp.</h4>
+                            <span class="text-[10px] md:text-xs font-bold text-slate-500 bg-slate-100 px-3 py-1 rounded-full w-fit">04/2023 - 07/2023</span>
+                        </div>
+                        <p class="text-sm font-bold text-cyan-500 uppercase tracking-wide mb-4">Cámara de Comercio de Mujeres</p>
+                        <p class="text-slate-600 text-sm leading-relaxed font-medium">
+                            Organización gremial. Liderazgo en el desarrollo del manual de marca y adjudicación de fondos estatales del Ministerio de Cultura para la producción ejecutiva del podcast "Escrito por Ellas".
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 6 -->
+                <div class="reveal relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group cursor-default" style="transition-delay: 600ms;">
+                    <div class="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full border-4 border-white bg-slate-100 text-slate-400 group-hover:bg-cyan-500 group-hover:text-white transition-colors duration-500 shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 shadow-sm group-hover:shadow-cyan-500/50 z-10">
+                        <i data-lucide="layers" class="w-5 h-5"></i>
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] p-6 md:p-8 rounded-3xl bg-white border border-slate-100 shadow-sm group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-3 gap-2">
+                            <h4 class="font-extrabold text-xl text-blue-950">Facilitador de Proyecto</h4>
+                            <span class="text-[10px] md:text-xs font-bold text-slate-500 bg-slate-100 px-3 py-1 rounded-full w-fit">04/2021 - 07/2021</span>
+                        </div>
+                        <p class="text-sm font-bold text-cyan-500 uppercase tracking-wide mb-4">UNICEF PERÚ</p>
+                        <p class="text-slate-600 text-sm leading-relaxed font-medium">
+                            Logré el 100% de cumplimiento en la redacción y entrega de notas periodísticas por parte de instituciones educativas, ejecutando una movilización estratégica de directores y líderes juveniles.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="casos" class="py-24 px-8 md:px-12 lg:px-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="reveal flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-8">
+                <div>
+                    <h2 class="text-base md:text-lg font-bold text-cyan-600 tracking-widest uppercase mb-3">Evidencia de Gestión</h2>
+                    <h3 class="text-3xl md:text-5xl font-extrabold tracking-tight text-blue-950">Casos de Éxito</h3>
+                </div>
+                
+                <div class="flex flex-wrap gap-2 bg-white p-2 rounded-full shadow-sm border border-slate-200" id="filter-buttons">
+                    <!-- Botones de filtro -->
+                    <button data-filter="Todos" class="filter-btn active bg-blue-950 text-white px-5 py-2.5 rounded-full text-sm font-bold transition-all duration-300 shadow-md hover:scale-105 active:scale-95">Todos</button>
+                    <button data-filter="Corporate PR" class="filter-btn bg-transparent text-slate-500 hover:text-blue-950 hover:bg-slate-100 px-5 py-2.5 rounded-full text-sm font-bold transition-all duration-300 hover:scale-105 active:scale-95">Corporate PR</button>
+                    <button data-filter="PR Digital & Growth" class="filter-btn bg-transparent text-slate-500 hover:text-blue-950 hover:bg-slate-100 px-5 py-2.5 rounded-full text-sm font-bold transition-all duration-300 hover:scale-105 active:scale-95">PR Digital & Growth</button>
+                    <button data-filter="Asuntos Públicos" class="filter-btn bg-transparent text-slate-500 hover:text-blue-950 hover:bg-slate-100 px-5 py-2.5 rounded-full text-sm font-bold transition-all duration-300 hover:scale-105 active:scale-95">Asuntos Públicos</button>
+                    <button data-filter="Branding & Media" class="filter-btn bg-transparent text-slate-500 hover:text-blue-950 hover:bg-slate-100 px-5 py-2.5 rounded-full text-sm font-bold transition-all duration-300 hover:scale-105 active:scale-95">Branding & Media</button>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolio-grid">
+                <!-- Los Casos de Éxito se inyectarán aquí dinámicamente mediante JS -->
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="bg-blue-950 text-white py-24 lg:py-32 px-8 md:px-12 lg:px-20 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-900/40 via-blue-950 to-blue-950 pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center relative z-10">
+            <div class="reveal">
+                <h2 class="text-5xl md:text-7xl font-black mb-8 leading-[1.1]">
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Conectemos.</span>
+                </h2>
+                <p class="text-blue-100/80 text-xl mb-12 max-w-lg leading-relaxed font-medium">
+                    Co-creamos estrategias de relaciones públicas, asuntos públicos y posicionamiento digital estructuradas para resolver los desafíos comerciales de tu organización.
+                </p>
+                
+                <div class="space-y-6">
+                    <a href="mailto:delacruzmontalvo.edward4@gmail.com" class="group flex items-center gap-6 text-blue-200 hover:text-white transition-colors">
+                        <div class="w-14 h-14 rounded-full bg-blue-900/50 flex items-center justify-center group-hover:bg-cyan-500 group-hover:text-blue-950 group-hover:scale-110 transition-all duration-300 border border-blue-800">
+                            <i data-lucide="mail" class="w-6 h-6"></i>
+                        </div>
+                        <span class="text-lg font-medium group-hover:translate-x-1 transition-transform">delacruzmontalvo.edward4@gmail.com</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/edwarddm/" target="_blank" rel="noreferrer" class="group flex items-center gap-6 text-blue-200 hover:text-white transition-colors">
+                        <div class="w-14 h-14 rounded-full bg-blue-900/50 flex items-center justify-center group-hover:bg-[#0A66C2] group-hover:text-white group-hover:scale-110 transition-all duration-300 border border-blue-800">
+                            <i data-lucide="linkedin" class="w-6 h-6"></i>
+                        </div>
+                        <span class="text-lg font-medium group-hover:translate-x-1 transition-transform">linkedin.com/in/edwarddm/</span>
+                    </a>
+                    <a href="https://www.behance.net/edwarddm" target="_blank" rel="noreferrer" class="group flex items-center gap-6 text-blue-200 hover:text-white transition-colors">
+                        <div class="w-14 h-14 rounded-full bg-blue-900/50 flex items-center justify-center group-hover:bg-[#1769ff] group-hover:text-white group-hover:scale-110 transition-all duration-300 border border-blue-800">
+                            <i data-lucide="globe" class="w-6 h-6"></i>
+                        </div>
+                        <span class="text-lg font-medium group-hover:translate-x-1 transition-transform">Behance Portfolio</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="reveal" style="transition-delay: 200ms;">
+                <div class="bg-white p-10 md:p-12 rounded-[2.5rem] text-slate-900 shadow-2xl relative group hover:shadow-cyan-500/20 transition-all duration-500 hover:-translate-y-2 overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-cyan-50 rounded-bl-[4rem] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
+                    
+                    <h3 class="text-3xl font-extrabold mb-8 text-blue-950 relative z-10">Iniciemos un proyecto</h3>
+                    <form id="contact-form" class="space-y-6 relative z-10">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Nombre</label>
+                            <input type="text" id="nombre" required class="w-full bg-slate-50 border-2 border-slate-100 rounded-xl px-5 py-4 focus:outline-none focus:border-cyan-500 focus:bg-white focus:ring-4 focus:ring-cyan-500/10 transition-all font-medium text-blue-950" placeholder="Tu nombre" />
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Email</label>
+                            <input type="email" id="email" required class="w-full bg-slate-50 border-2 border-slate-100 rounded-xl px-5 py-4 focus:outline-none focus:border-cyan-500 focus:bg-white focus:ring-4 focus:ring-cyan-500/10 transition-all font-medium text-blue-950" placeholder="tu@empresa.com" />
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Mensaje</label>
+                            <textarea id="mensaje" required rows="4" class="w-full bg-slate-50 border-2 border-slate-100 rounded-xl px-5 py-4 focus:outline-none focus:border-cyan-500 focus:bg-white focus:ring-4 focus:ring-cyan-500/10 transition-all font-medium resize-none text-blue-950" placeholder="¿En qué puedo ayudarte?"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-950 hover:bg-cyan-500 hover:text-blue-950 text-white font-extrabold py-5 rounded-xl transition-all duration-300 text-lg shadow-xl hover:shadow-cyan-500/30 hover:-translate-y-1 active:scale-95 flex items-center justify-center gap-2">
+                            <i data-lucide="mail" class="w-5 h-5"></i> Contactar
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <div class="reveal" style="transition-delay: 300ms;">
+            <div class="max-w-7xl mx-auto mt-24 pt-8 border-t border-blue-900/50 text-center text-blue-200/50 text-sm font-medium">
+                © <span id="current-year"></span> Edward De La Cruz Montalvo. Consultor de Comunicación Estratégica, PR & Asuntos Públicos.
+            </div>
+        </div>
+    </section>
+
+    <div id="case-modal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 md:p-8 lg:p-12 opacity-0 transition-opacity duration-300">
+        <div class="absolute inset-0 bg-blue-950/80 backdrop-blur-sm" id="modal-bg"></div>
+        <div class="relative bg-white w-full max-w-5xl max-h-[90vh] overflow-y-auto rounded-[2rem] shadow-2xl flex flex-col transform scale-95 transition-transform duration-300" id="modal-content">
+            
+            <div class="h-64 md:h-96 bg-slate-100 relative flex items-center justify-center text-slate-500 overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-slate-900/20 to-transparent z-10"></div>
+                <!-- La imagen se inyectará aquí -->
+                <img id="modal-image" src="" alt="" class="absolute inset-0 w-full h-full object-cover">
+                
+                <button id="close-modal" class="absolute top-6 right-6 z-20 bg-white/90 hover:bg-white text-blue-950 p-3 rounded-full hover:scale-110 active:scale-95 transition-all shadow-lg">
+                    <i data-lucide="x" class="w-5 h-5 font-bold"></i>
+                </button>
+            </div>
+
+            <div class="p-8 md:p-12 lg:p-16">
+                <div class="mb-12">
+                    <span id="modal-client" class="inline-block px-4 py-1.5 bg-blue-50 text-blue-800 font-bold text-xs rounded-full uppercase tracking-wider mb-4 border border-blue-100"></span>
+                    <h2 id="modal-title" class="text-3xl md:text-5xl font-black mb-10 leading-tight text-blue-950"></h2>
+                    
+                    <div id="modal-metrics" class="flex flex-wrap gap-4">
+                        <!-- Las métricas se inyectarán aquí -->
+                    </div>
+                </div>
+
+                <div class="grid lg:grid-cols-12 gap-12 lg:gap-16">
+                    <div class="lg:col-span-5">
+                        <div class="sticky top-6">
+                            <h3 class="text-sm font-bold text-slate-400 uppercase tracking-widest mb-4 flex items-center gap-3">
+                                <i data-lucide="layout" class="w-5 h-5 text-blue-900"></i> El Desafío (Contexto)
+                            </h3>
+                            <p id="modal-context" class="text-slate-700 leading-relaxed text-lg font-medium"></p>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-7 space-y-12">
+                        <div>
+                            <h3 class="text-sm font-bold text-slate-400 uppercase tracking-widest mb-6 flex items-center gap-3">
+                                <i data-lucide="pie-chart" class="w-5 h-5 text-cyan-500"></i> Estrategia y Ejecución
+                            </h3>
+                            <ul id="modal-actions" class="space-y-4">
+                                <!-- Las acciones se inyectarán aquí -->
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3 class="text-sm font-bold text-slate-400 uppercase tracking-widest mb-6 flex items-center gap-3">
+                                <i data-lucide="award" class="w-5 h-5 text-cyan-500"></i> Impacto y Resultados
+                            </h3>
+                            <div class="bg-blue-50/50 p-6 rounded-2xl border border-blue-100">
+                                <ul id="modal-results" class="space-y-5">
+                                    <!-- Los resultados se inyectarán aquí -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Data del Portafolio
+        const portfolioData = [
+            {
+                id: 1,
+                title: "Estrategia PR & Posicionamiento C-Level",
+                client: "Tetra Pak Perú / Defontana",
+                category: "Corporate PR",
+                image: "https://res.cloudinary.com/eamgwqrw/image/upload/v1789627679/Imagen_Corporate.png",
+                metrics: [
+                    { label: "PR Value", value: "S/ 53K+" },
+                    { label: "Medios Target", value: "Tier 1" },
+                    { label: "Impactos", value: "+25" }
+                ],
+                context: "Las marcas requerían consolidar su liderazgo en sus respectivos sectores (sostenibilidad industrial y software empresarial). El objetivo fue diseñar una arquitectura de marca para la alta dirección y maximizar el Share of Voice (SOV) en la prensa económica y de negocios.",
+                actions: [
+                    "Media pitching y relacionamiento estratégico exclusivo con medios informativos Tier 1 (Gestión, El Comercio, Semana Económica).",
+                    "Diseño de narrativas directivas basadas en innovación, eficiencia operativa y factores ESG.",
+                    "Gestión de agenda mediática para el nombramiento del nuevo Director Comercial de Tetra Pak y posicionamiento de voceros tecnológicos de Defontana."
+                ],
+                results: [
+                    "Generación de un PR Value superior a S/ 53,526.00 en campañas mensuales.",
+                    "Penetración total en los impresos de negocios más prestigiosos del país en una sola semana.",
+                    "Logro de más de 25 impactos mediáticos de alto valor, consolidando la percepción de liderazgo sectorial."
+                ]
+            },
+            {
+                id: 2,
+                title: "Performance & Growth B2B: Transformación Digital",
+                client: "Grupo HNG (Concrefab, Facilita)",
+                category: "PR Digital & Growth",
+                image: "https://res.cloudinary.com/eamgwqrw/image/upload/v1789628104/Imagen_Growth.png",
+                metrics: [
+                    { label: "Tráfico Web", value: "+729%" },
+                    { label: "Reducción CPL", value: "-91%" },
+                    { label: "Leads B2B", value: "+60%" }
+                ],
+                context: "El holding industrial necesitaba estructurar un ecosistema digital activo que nutriera su embudo de ventas corporativo, optimizando la inversión y elevando el posicionamiento en el mercado B2B.",
+                actions: [
+                    "Auditoría y reestructuración de pauta semántica en Google Ads centrada en keywords de alta intención corporativa.",
+                    "Definición de 3 'Buyer Personas' corporativos para redirigir el mensaje hacia atributos de confianza y seguridad.",
+                    "Diseño de arquitectura reputacional y posicionamiento de voceros en LinkedIn para traccionar relacionamiento comercial."
+                ],
+                results: [
+                    "Explosión de tráfico web corporativo (+729%) a través de esfuerzos orgánicos y pagados (SEO/SEM).",
+                    "Optimización drástica del Costo por Lead (CPL), reduciéndolo en un 91%.",
+                    "Incremento del 50% en visibilidad de marca y +60% en generación de leads B2B calificados."
+                ]
+            },
+            {
+                id: 3,
+                title: "Incidencia Política (Advocacy) y Asuntos Públicos",
+                client: "SODIS / Cooperación Internacional",
+                category: "Asuntos Públicos",
+                image: "https://res.cloudinary.com/eamgwqrw/image/upload/v1789627678/Imagen_Asuntos_Publicos.png",
+                metrics: [
+                    { label: "Líderes Opinión", value: "27" },
+                    { label: "Repercusión", value: "Nacional" },
+                    { label: "Advocacy", value: "Aprobado" }
+                ],
+                context: "Traducir demandas técnicas y normativas en un mensaje de urgencia ciudadana y política. El reto fue generar una corriente de opinión que influyera positivamente en las decisiones del parlamento y tomadores de decisiones estatales.",
+                actions: [
+                    "Gestión de relaciones institucionales y marketing de influencia con una red de 27 líderes de opinión.",
+                    "Despliegue de campaña de incidencia (Advocacy) articulando medios nativos independientes y prensa tradicional (Tier 1).",
+                    "Ejecución de estrategias de movilización digital ('Twitazo') para dominar la conversación pública."
+                ],
+                results: [
+                    "Viralización de la demanda técnica, validándola ante la opinión pública y los decisores del Estado.",
+                    "Posicionamiento exitoso del tema en la agenda parlamentaria, contribuyendo a la aprobación de recursos en la comisión respectiva."
+                ]
+            },
+            {
+                id: 4,
+                title: "Branding y Producción: Podcast 'Escrito por Ellas'",
+                client: "Cámara de Comercio de Mujeres Peruanas",
+                category: "Branding & Media",
+                image: "https://res.cloudinary.com/eamgwqrw/image/upload/v1789627679/Imagen_Podcast.png",
+                metrics: [
+                    { label: "Financiamiento", value: "Mincul" },
+                    { label: "Producción", value: "Integral" },
+                    { label: "Identidad", value: "Creada" }
+                ],
+                context: "Desarrollar, estructurar y producir un proyecto cultural competitivo que representara los valores gremiales de la Cámara, con el rigor necesario para obtener financiamiento estatal.",
+                actions: [
+                    "Creación integral del Manual de Marca e identidad visual (lineamientos, paleta, ecosistema gráfico).",
+                    "Liderazgo en la postulación y gestión de requisitos para los Estímulos Económicos para la Cultura.",
+                    "Producción general del podcast, asegurando el flujo desde la conceptualización hasta la distribución."
+                ],
+                results: [
+                    "Adjudicación de los fondos estatales (Ministerio de Cultura) para el año 2023.",
+                    "Lanzamiento de un producto de alta calidad que posiciona el liderazgo empresarial y cultural de la institución a nivel nacional."
+                ]
+            },
+            {
+                id: 5,
+                title: "Comunicación para el Desarrollo y Gestión Territorial",
+                client: "ProInversión & IDEA Internacional (vía QINTI)",
+                category: "Proyectos Institucionales",
+                image: "https://res.cloudinary.com/eamgwqrw/image/upload/v1789628278/Imagen_Proyectos.png",
+                metrics: [
+                    { label: "Publicaciones", value: "Estratégicas" },
+                    { label: "Sectores", value: "Gobierno" },
+                    { label: "Gestión", value: "Integral" }
+                ],
+                context: "Fortalecer la memoria institucional y facilitar la interlocución público-privada mediante la edición y difusión de materiales estratégicos sobre obras por impuestos y desarrollo territorial.",
+                actions: [
+                    "Edición de publicaciones institucionales adaptando lenguajes técnicos gubernamentales a formatos de lectura de alto impacto.",
+                    "Diseño de estrategias de relacionamiento para proyectos de cooperación democrática (IDEA Internacional).",
+                    "Coordinación de narrativas enfocadas en transparencia y alianzas público-privadas."
+                ],
+                results: [
+                    "Entrega de productos editoriales y estrategias de relacionamiento que fungen como activos de reputación a largo plazo para las instituciones gubernamentales y de cooperación."
+                ]
+            },
+            {
+                id: 6,
+                title: "Movilización y Comunicación Social",
+                client: "UNICEF PERÚ",
+                category: "Comunicaciones Digitales",
+                image: "https://res.cloudinary.com/eamgwqrw/image/upload/v1789627679/Imagen_Movilizaci%C3%B3n.png",
+                metrics: [
+                    { label: "Cumplimiento", value: "100%" },
+                    { label: "Impacto", value: "Regional" },
+                    { label: "Corresponsales", value: "Activos" }
+                ],
+                context: "Incentivar la participación de jóvenes líderes y educadores a nivel regional para el proyecto 'Corresponsales Escolares', asegurando la producción y flujo constante de contenidos periodísticos desde las comunidades.",
+                actions: [
+                    "Facilitación y movilización estratégica de directores, docentes y jóvenes escolares en diversas regiones.",
+                    "Gestión de entregables de comunicación y capacitación en redacción periodística.",
+                    "Seguimiento y auditoría de la producción de notas en el marco del programa de UNICEF."
+                ],
+                results: [
+                    "100% de cumplimiento en la redacción y entrega de notas periodísticas por parte de las instituciones educativas involucradas.",
+                    "Fomento efectivo del liderazgo juvenil y la participación comunitaria a través de la comunicación."
+                ]
+            }
+        ];
+
+        // Se ejecuta al cargar completamente el DOM
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // 1. Inicializar iconos base (los que están estáticos en el HTML)
+            lucide.createIcons();
+            
+            // 2. Año actual en el footer
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            // 3. Navbar interactiva en scroll
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.remove('bg-transparent', 'py-6');
+                    navbar.classList.add('bg-white/95', 'backdrop-blur-md', 'shadow-sm', 'py-4');
+                } else {
+                    navbar.classList.add('bg-transparent', 'py-6');
+                    navbar.classList.remove('bg-white/95', 'backdrop-blur-md', 'shadow-sm', 'py-4');
+                }
+            });
+
+            // 4. Lógica de Scroll Reveal
+            const observerOptions = {
+                threshold: 0.15,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        // Dejamos de observar una vez que ha animado
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            // Observamos todo lo estático al iniciar
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+            // 5. Renderizado y Filtro del Portafolio
+            const grid = document.getElementById('portfolio-grid');
+            
+            function renderPortfolio(filter = 'Todos') {
+                grid.innerHTML = '';
+                const filteredData = filter === 'Todos' ? portfolioData : portfolioData.filter(item => item.category === filter);
+                
+                filteredData.forEach((project, i) => {
+                    const cardHtml = `
+                        <div class="reveal h-full bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 cursor-pointer border border-slate-100 flex flex-col transform hover:-translate-y-2 group" style="transition-delay: ${i * 100}ms;" onclick="openModal(${project.id})">
+                            <div class="h-56 bg-slate-200 overflow-hidden relative">
+                                <div class="absolute inset-0 transition-transform duration-700 group-hover:scale-110">
+                                    <img src="${project.image}" alt="${project.title}" class="w-full h-full object-cover ${project.id === 2 || project.id === 5 ? 'object-top' : ''}">
+                                </div>
+                                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                <div class="absolute top-4 left-4 z-20 bg-white/95 backdrop-blur-md px-4 py-1.5 rounded-full text-xs font-bold text-blue-950 shadow-sm border border-slate-100">
+                                    ${project.client}
+                                </div>
+                            </div>
+                            <div class="p-8 flex-grow flex flex-col">
+                                <p class="text-cyan-600 text-xs font-extrabold uppercase tracking-widest mb-3">${project.category}</p>
+                                <h3 class="text-2xl font-extrabold mb-6 line-clamp-2 leading-tight text-blue-950 group-hover:text-cyan-600 transition-colors">${project.title}</h3>
+                                
+                                <div class="mt-auto grid grid-cols-2 gap-4 pt-6 border-t border-slate-100">
+                                    ${project.metrics.slice(0,2).map(m => `
+                                        <div>
+                                            <p class="text-2xl font-black text-blue-950">${m.value}</p>
+                                            <p class="text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-wide">${m.label}</p>
+                                        </div>
+                                    `).join('')}
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    grid.insertAdjacentHTML('beforeend', cardHtml);
+                });
+                
+                // Aplicar el observador a los elementos recién inyectados para que animen suavemente
+                document.querySelectorAll('#portfolio-grid .reveal').forEach(el => observer.observe(el));
+            }
+
+            renderPortfolio(); // Render inicial
+
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    filterBtns.forEach(b => {
+                        b.classList.remove('bg-blue-950', 'text-white', 'shadow-md');
+                        b.classList.add('bg-transparent', 'text-slate-500');
+                    });
+                    e.target.classList.remove('bg-transparent', 'text-slate-500');
+                    e.target.classList.add('bg-blue-950', 'text-white', 'shadow-md');
+                    
+                    const filter = e.target.getAttribute('data-filter');
+                    renderPortfolio(filter);
+                });
+            });
+
+            // 6. Lógica del Modal
+            const modal = document.getElementById('case-modal');
+            const modalBg = document.getElementById('modal-bg');
+            const modalContent = document.getElementById('modal-content');
+            const closeBtn = document.getElementById('close-modal');
+
+            // Función expuesta al scope global para el onclick=""
+            window.openModal = function(id) {
+                const project = portfolioData.find(p => p.id === id);
+                if(!project) return;
+
+                document.getElementById('modal-image').src = project.image;
+                document.getElementById('modal-client').textContent = project.client;
+                document.getElementById('modal-title').textContent = project.title;
+                document.getElementById('modal-context').textContent = project.context;
+
+                document.getElementById('modal-metrics').innerHTML = project.metrics.map(m => `
+                    <div class="bg-slate-50 border border-slate-100 px-8 py-5 rounded-2xl flex-1 min-w-[160px] transform hover:-translate-y-1 transition-transform">
+                        <p class="text-4xl font-black text-cyan-600 mb-2">${m.value}</p>
+                        <p class="text-xs font-bold text-slate-500 uppercase tracking-widest">${m.label}</p>
+                    </div>
+                `).join('');
+
+                document.getElementById('modal-actions').innerHTML = project.actions.map((action, idx) => `
+                    <li class="flex gap-4 items-start bg-slate-50 p-5 rounded-2xl border border-slate-100 hover:shadow-md transition-shadow">
+                        <span class="w-6 h-6 rounded-full bg-blue-950 text-white flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">${idx + 1}</span>
+                        <span class="text-slate-700 font-medium">${action}</span>
+                    </li>
+                `).join('');
+
+                document.getElementById('modal-results').innerHTML = project.results.map((result) => `
+                    <li class="flex gap-4 text-blue-950 font-bold items-start">
+                        <i data-lucide="chevron-right" class="w-6 h-6 text-cyan-500 flex-shrink-0"></i>
+                        <span class="text-lg">${result}</span>
+                    </li>
+                `).join('');
+                
+                // ¡Importante! Volver a generar los iconos inyectados en el innerHTML (chevron-right)
+                lucide.createIcons();
+
+                // Mostrar Modal con animaciones (idénticas a React fade-in zoom-in)
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                document.body.classList.add('modal-active');
+                
+                setTimeout(() => {
+                    modal.classList.remove('opacity-0');
+                    modal.classList.add('opacity-100');
+                    modalContent.classList.remove('scale-95');
+                    modalContent.classList.add('scale-100');
+                }, 10);
+            };
+
+            function closeModal() {
+                modal.classList.remove('opacity-100');
+                modal.classList.add('opacity-0');
+                modalContent.classList.remove('scale-100');
+                modalContent.classList.add('scale-95');
+                
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                    modal.classList.remove('flex');
+                    document.body.classList.remove('modal-active');
+                }, 300);
+            }
+
+            closeBtn.addEventListener('click', closeModal);
+            modalBg.addEventListener('click', closeModal);
+
+            // 7. Envio del Formulario por Email
+            document.getElementById('contact-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const nombre = document.getElementById('nombre').value;
+                const email = document.getElementById('email').value;
+                const mensaje = document.getElementById('mensaje').value;
+
+                const subject = encodeURIComponent(`Nuevo Contacto desde Portafolio: ${nombre}`);
+                const body = encodeURIComponent(`Hola Edward,\n\nHas recibido un nuevo mensaje desde tu portafolio web.\n\nDatos de contacto:\nNombre: ${nombre}\nEmail: ${email}\n\nMensaje:\n${mensaje}\n\nSaludos.`);
+                
+                window.location.href = `mailto:delacruzmontalvo.edward4@gmail.com?subject=${subject}&body=${body}`;
+                
+                // Limpiar formulario tras procesar
+                this.reset();
+            });
+
+        });
+    </script>
+</body>
+</html>
